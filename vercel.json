@@ -1,0 +1,13 @@
+{
+  "buildCommand": "echo 'Serverless functions - no static build needed'",
+  "outputDirectory": "public",
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ]
+}

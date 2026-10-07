@@ -1,0 +1,46 @@
+{
+  "name": "anime-bot-backend",
+  "version": "1.0.0",
+  "description": "Bot de Telegram para gestión de grupo de anime",
+  "main": "dist/local.js",
+  "type": "commonjs",
+  "scripts": {
+    "local": "ts-node-dev --respawn --transpile-only src/local.ts",
+    "build": "tsc",
+    "vercel-build": "tsc"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "anime"
+  ],
+  "author": "Tu Nombre",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/node": "^3.2.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.45.3",
+    "grammy": "^1.30.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "local": "ts-node-dev --respawn --transpile-only src/local.ts",
+    "build": "tsc",
+    "vercel-build": "tsc",
+    "db:generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config=drizzle.config.ts",
+    "db:push": "drizzle-kit push --config=drizzle.config.ts",
+    "db:studio": "drizzle-kit studio --config=drizzle.config.ts"
+  }
+}
